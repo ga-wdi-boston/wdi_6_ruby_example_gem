@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tibbon@gmail.com"]
   spec.description   = %q{An example gem}
   spec.summary       = %q{Makes requests to APIs and has tests.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/tibbon/ga-example-gem"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
