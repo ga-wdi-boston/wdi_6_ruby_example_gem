@@ -19,6 +19,9 @@ end
 
 
 group :test do
+  gem 'webmock'
+	gem 'simplecov'
+	gem 'coveralls'
 	gem 'rspec'
 	gem 'shoulda-matchers'
 end

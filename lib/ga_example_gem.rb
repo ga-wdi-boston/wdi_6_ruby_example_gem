@@ -1,3 +1,4 @@
+require 'pry'
 require 'ga_example_gem/client'
 
 module GaExampleGem
@@ -16,6 +17,5 @@ module GaExampleGem
     def respond_to?(method, include_private=false)
       new.respond_to?(method, include_private) || super(method, include_private)
     end
+  end
 end
-
-binding.pry

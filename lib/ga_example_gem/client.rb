@@ -1,3 +1,4 @@
+require 'httparty'
 require 'ga_example_gem/configuration'
 
 module GaExampleGem
@@ -10,7 +11,7 @@ module GaExampleGem
   	end
 
   	def get_xkcd(number)
-  		self.class.get('http://xkcd-unofficial-api.herokuapp.com/xkcd?num=1')
+  		self.class.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?num=#{number}")
   	end
 	end
 end
