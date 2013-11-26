@@ -2,6 +2,10 @@
 
 [![Coverage Status](https://coveralls.io/repos/tibbon/ga-example-gem/badge.png)](https://coveralls.io/r/tibbon/ga-example-gem)
 
+[![Build Status](https://travis-ci.org/tibbon/ga-example-gem.png?branch=master)](https://travis-ci.org/tibbon/ga-example-gem)
+
+[![Code Climate](https://codeclimate.com/github/tibbon/ga-example-gem.png)](https://codeclimate.com/github/tibbon/ga-example-gem)
+
 This Gem is just to demonstrate some patterns for creating, documenting and testing a Gem. 
 
 ## Installation
