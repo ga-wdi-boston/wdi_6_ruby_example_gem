@@ -5,7 +5,7 @@
 # gem build ga-example-gem.gemspec
 
 # `rake release`
-# is
+# is, and also tags it in Github for us
 # gem push ga-example-gem-0.0.3.gem
 
 require 'bundler'
