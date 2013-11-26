@@ -17,3 +17,5 @@ module GaExampleGem
       new.respond_to?(method, include_private) || super(method, include_private)
     end
 end
+
+binding.pry

@@ -4,13 +4,13 @@ module GaExampleGem
 	class Client
 		include GaExampleGem::Configuration
 		include HTTParty
-			
+
 		def initialize
       reset
   	end
 
   	def get_xkcd(number)
-
+  		self.class.get('http://xkcd-unofficial-api.herokuapp.com/xkcd?num=1')
   	end
 	end
 end
