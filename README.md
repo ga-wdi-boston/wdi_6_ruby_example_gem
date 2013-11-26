@@ -31,6 +31,7 @@ Setup a new instance:
 ```ruby
 client = GaExampleGem.configure do |config|
 	config.api_key = "your_api_key"
+	config.oauth_key = "foo"
 end
 ```
 

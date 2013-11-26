@@ -18,7 +18,9 @@ module GaExampleGem
   	# This method gets the JSON for a single XKCD comic
   	# by number
   	def get_xkcd(number)
-  		JSON.parse self.class.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?num=#{number}")
+  		# This works too
+  		# JSON.parse self.class.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?num=#{number}")
+  		JSON.parse HTTParty.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?num=#{number}")
   	end
 	end
 end
