@@ -29,10 +29,12 @@ Or install it yourself as:
 Setup a new instance: 
 
 ```ruby
-client = GaExampleGem.configure do |config|
+@client = GaExampleGem.new
+@client.configure do |config|
 	config.api_key = "your_api_key"
 	config.oauth_key = "foo"
 end
+@client.api_key
 ```
 
 
