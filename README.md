@@ -1,5 +1,7 @@
 # GaExampleGem
 
+[![Gem Version](https://badge.fury.io/rb/ga_example_gem.png)](http://badge.fury.io/rb/ga_example_gem)
+
 [![Coverage Status](https://coveralls.io/repos/tibbon/ga-example-gem/badge.png)](https://coveralls.io/r/tibbon/ga-example-gem)
 
 [![Build Status](https://travis-ci.org/tibbon/ga-example-gem.png?branch=master)](https://travis-ci.org/tibbon/ga-example-gem)
