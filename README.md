@@ -26,6 +26,7 @@ client = GaExampleGem.configure do |config|
 end
 ```
 
+
 Now make a request for an XKCD comic:
 
 ```ruby
