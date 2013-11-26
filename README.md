@@ -1,12 +1,12 @@
-# Ga::Example::Gem
+# GaExampleGem
 
-TODO: Write a gem description
+This Gem is just to demonstrate some patterns for creating, documenting and testing a Gem. 
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'ga-example-gem'
+    gem 'ga_example_gem'
 
 And then execute:
 
@@ -14,11 +14,24 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ga-example-gem
+    $ gem install ga_example_gem
 
 ## Usage
 
-TODO: Write usage instructions here
+Setup a new instance: 
+
+```ruby
+client = GaExampleGem.configure do |config|
+	config.api_key = "your_api_key"
+end
+```
+
+Now make a request for an XKCD comic:
+
+```ruby
+	# Returns JSON of the first XKCD comic
+	client.get_xkcd(1)
+```
 
 ## Contributing
 
