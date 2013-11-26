@@ -7,4 +7,13 @@ describe GaExampleGem do
 		end
 	end
 
+	describe ".configure" do
+    it "sets api_key" do
+      GaExampleGem.configure do |config|
+        config.api_key = "its a secret to everybody"
+      end
+
+      expect(GaExampleGem.api_key).to eq "its a secret to everybody"
+    end
+  end
 end
