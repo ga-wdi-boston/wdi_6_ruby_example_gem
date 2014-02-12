@@ -65,7 +65,7 @@ describe GaExampleGem::Client do
       comics = @client.get_comics(year: 2007, month: 1)
       expect(a_request(:get, 'http://xkcd-unofficial-api.herokuapp.com/xkcd?year=2007&month=1')).to have_been_made
       expect(comics).to be_an Array
-      expect(comics.first["title"]).to eq "America"
+      expect(comics.first["title"]).to eq "Barrel - Part 1"
       expect(comics.count).to eq 3
     end
 
@@ -74,7 +74,7 @@ describe GaExampleGem::Client do
       expect(a_request(:get, 'http://xkcd-unofficial-api.herokuapp.com/xkcd?api_key=foobar&year=2007&month=1')).to have_been_made
       expect(comics).to be_an Array
       expect(comics.first["title"]).to eq "America"
-      expect(comics.count).to eq 14
+      expect(comics.count).to eq 10
     end
 
   end
