@@ -1,6 +1,7 @@
 require 'json'
 require 'httparty'
 require 'ga_example_gem/configuration'
+require 'addressable/uri'
 
 module GaExampleGem
 	
@@ -25,7 +26,38 @@ module GaExampleGem
   	end
 
     def get_xkcds_from_year(year)
-      JSON.parse HTTParty.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?year=#{year}")
+      if !self.api_key.empty?
+        JSON.parse HTTParty.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?year=#{year}&api_key=#{self.api_key}")
+      else
+        JSON.parse HTTParty.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?year=#{year}")
+      end
     end
+
+    # 
+    # get_comics(year: '2007', month: '2')
+    def get_comics(params={})
+      unless api_key.empty?
+        params[:api_key] = api_key
+      end
+
+      uri = Addressable::URI.new
+      uri.query_values = params
+      uri_suffix = uri.query
+
+      JSON.parse HTTParty.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?#{uri_suffix}")
+    end
+
 	end
 end
+
+
+
+
+
+
+
+
+
+
+
+
