@@ -10,6 +10,7 @@ module GaExampleGem
 		include GaExampleGem::Configuration
 		include HTTParty
 
+  # @client = GaExampleGem::Client.new
 		# This resets our API keys when it is initialized
 		def initialize
       reset
@@ -22,5 +23,9 @@ module GaExampleGem
   		# JSON.parse self.class.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?num=#{number}")
   		JSON.parse HTTParty.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?num=#{number}")
   	end
+
+    def get_xkcds_from_year(year)
+      JSON.parse HTTParty.get("http://xkcd-unofficial-api.herokuapp.com/xkcd?year=#{year}")
+    end
 	end
 end
